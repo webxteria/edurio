@@ -1,4 +1,12 @@
-# edurio
+# Edurio
+
+## Problem
+Create API with necessary endpoints to populate answers for questions and return
+Results must contain 10 questions:
+  1. 9 questions with 6 answer options (scalar values 0 - 5)
+  2. 1 open question
+Populate answers to questions - 100k answers per question. Graph question answers must be
+randomized.
 
 ## Installation
 
