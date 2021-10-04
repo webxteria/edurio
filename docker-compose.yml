@@ -34,7 +34,7 @@ services:
       - redis
 
   mysql:
-    platform: linux/x86_64
+    platform: linux/x86_64 # added for Apple with M1 
     image: mysql:latest
     ports:
       - "${DB_PORT}:3306"
