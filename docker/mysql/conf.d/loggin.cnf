@@ -1,0 +1,4 @@
+[mysqld]
+general-log = On
+general-log-file = /var/log/mysql/mysql.log
+default_authentication_plugin= mysql_native_password
