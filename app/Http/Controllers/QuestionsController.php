@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Question;
 use App\Http\Resources\QuestionsResource;
 use Illuminate\Http\Request;
+use DB;
 
 class QuestionsController extends Controller
 {
@@ -13,10 +14,28 @@ class QuestionsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function scalar(Request $request)
     {
+        $openQuestions = Question::where('type', 'scalar')
+            ->with('answers')
+            ->withSum('answers', 'scalar_answer')
+            ->withCount('answers');
+        $openQuestions = $openQuestions->limit(9)->get();
 
-        return  QuestionsResource::collection(Question::paginate(10));
+        return QuestionsResource::collection($openQuestions);
     }
 
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function open(Request $request)
+    {
+
+        $scalarQuestions = Question::where('type', 'open')->with('answers')->limit(9)->get();
+
+        return  QuestionsResource::collection($scalarQuestions);
+    }
 }

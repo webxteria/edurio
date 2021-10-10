@@ -81,3 +81,36 @@
 2021-10-03 07:54:41,631 INFO spawned: 'schedule' with pid 14
 2021-10-03 07:54:42,645 INFO success: worker entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
 2021-10-03 07:54:42,646 INFO success: schedule entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-10-05 16:21:40,583 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2021-10-05 16:21:40,601 INFO supervisord started with pid 1
+2021-10-05 16:21:41,608 INFO spawned: 'worker' with pid 12
+2021-10-05 16:21:41,612 INFO spawned: 'schedule' with pid 14
+2021-10-05 16:21:42,616 INFO success: worker entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-10-05 16:21:42,618 INFO success: schedule entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-10-08 07:44:13,000 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2021-10-08 07:44:13,032 INFO supervisord started with pid 1
+2021-10-08 07:44:14,040 INFO spawned: 'worker' with pid 13
+2021-10-08 07:44:14,047 INFO spawned: 'schedule' with pid 15
+2021-10-08 07:44:15,052 INFO success: worker entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-10-08 07:44:15,068 INFO success: schedule entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-10-08 09:33:01,635 WARN received SIGTERM indicating exit request
+2021-10-08 09:33:01,637 INFO waiting for worker, schedule to die
+2021-10-08 09:33:01,641 INFO stopped: schedule (terminated by SIGTERM)
+2021-10-08 09:33:01,643 INFO reaped unknown pid 455
+2021-10-08 09:33:01,664 INFO stopped: worker (terminated by SIGTERM)
+2021-10-08 09:33:37,516 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2021-10-08 09:33:37,526 INFO supervisord started with pid 1
+2021-10-08 09:33:38,531 INFO spawned: 'worker' with pid 12
+2021-10-08 09:33:38,534 INFO spawned: 'schedule' with pid 14
+2021-10-08 09:33:39,539 INFO success: worker entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-10-08 09:33:39,539 INFO success: schedule entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-10-09 12:59:30,312 WARN received SIGTERM indicating exit request
+2021-10-09 12:59:30,314 INFO waiting for worker, schedule to die
+2021-10-09 12:59:30,321 INFO stopped: schedule (terminated by SIGTERM)
+2021-10-09 12:59:30,355 INFO stopped: worker (terminated by SIGTERM)
+2021-10-09 12:59:59,884 CRIT Supervisor is running as root.  Privileges were not dropped because no user is specified in the config file.  If you intend to run as root, you can set user=root in the config file to avoid this message.
+2021-10-09 12:59:59,896 INFO supervisord started with pid 1
+2021-10-09 13:00:00,901 INFO spawned: 'worker' with pid 15
+2021-10-09 13:00:00,905 INFO spawned: 'schedule' with pid 17
+2021-10-09 13:00:01,910 INFO success: worker entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2021-10-09 13:00:01,911 INFO success: schedule entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use DB;
 
 class Question extends Model
 {
@@ -11,13 +12,17 @@ class Question extends Model
 
     public $fillable = ['question', 'type'];
 
-    function options()
-    {
-        return $this->hasMany(QuestionOption::class);
+    function answers()
+    { 
+        return $this->hasMany(Answer::class);
     }
 
-    function limitedOptions()
+    function answersSum()
     { 
-        return $this->hasMany(QuestionOption::class);
+        return $this->hasMany(Answer::class)->sum('scalar_answer');
     }
+
+//     public function scalar_answer(){
+//         return  $this->answers()->sum('scalar_answer');
+//   }
 }

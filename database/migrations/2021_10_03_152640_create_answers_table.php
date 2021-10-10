@@ -15,9 +15,8 @@ class CreateAnswersTable extends Migration
     {
         Schema::create('answers', function (Blueprint $table) {
             $table->id();
-            $table->integer('count')->default(0);
-            $table->float('average', 3, 2)->default(0);
-            $table->json('options');
+            $table->integer('scalar_answer')->nullable(true);
+            $table->text('open_answer')->nullable(true);
             $table->integer('question_id')->unsigned();
             $table->timestamps();
         });

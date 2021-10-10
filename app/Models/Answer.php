@@ -9,10 +9,6 @@ class Answer extends Model
 {
     use HasFactory;
 
-    protected $cast = [
-        'options' => 'array'
-    ];
-
-    public $fillable = ['count', 'average', 'options', 'question_id'];
+    public $fillable = ['scalar_answer', 'open_answer', 'question_id'];
 
 }

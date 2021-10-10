@@ -22,67 +22,9 @@ class AnswerFactory extends Factory
     public function definition()
     {
         return [
-            'count' => $this->faker->randomNumber(5),
-            'average' => $this->faker->randomFloat(2, 2, 0, 100),
-            'question_id' => 0,
-            'options' => json_encode(
-                [
-                    $this->faker->randomElement(
-                        [
-                            [
-                                [
-                                    'type' => 'scalar',
-                                    'order' =>  $this->faker->randomNumber(5),
-                                    'count' => $this->faker->randomNumber(9),
-                                    'percent' => $this->faker->randomFloat(2, 2, 0, 100)
-                                ],
-                                [
-                                    'type' => 'scalar',
-                                    'order' =>  $this->faker->randomNumber(5),
-                                    'count' => $this->faker->randomNumber(9),
-                                    'percent' => $this->faker->randomFloat(2, 2, 0, 100)
-                                ],
-                                [
-                                    'type' => 'scalar',
-                                    'order' =>  $this->faker->randomNumber(5),
-                                    'count' => $this->faker->randomNumber(9),
-                                    'percent' => $this->faker->randomFloat(2, 2, 0, 100)
-                                ],
-                                [
-                                    'type' => 'scalar',
-                                    'order' =>  $this->faker->randomNumber(5),
-                                    'count' => $this->faker->randomNumber(9),
-                                    'percent' => $this->faker->randomFloat(2, 2, 0, 100)
-                                ],
-                                [
-                                    'type' => 'scalar',
-                                    'order' =>  $this->faker->randomNumber(5),
-                                    'count' => $this->faker->randomNumber(9),
-                                    'percent' => $this->faker->randomFloat(2, 2, 0, 100)
-                                ],
-                                [
-                                    'type' => 'scalar',
-                                    'order' =>  $this->faker->randomNumber(5),
-                                    'count' => $this->faker->randomNumber(9),
-                                    'percent' => $this->faker->randomFloat(2, 2, 0, 100)
-                                ]
-                            ]
-                        ],
-                        [
-                            'type' => 'open',
-                            'wordcloud' => 'data:image/png;base64,...'
-                        ],
-                        [
-                            'type' => 'open',
-                            'wordcloud' => [
-                                'word' => 'school',
-                                'frequency' => 20
-                            ]
-                        ]
-
-                    )
-                ]
-            )
+            'scalar_answer' => $this->faker->randomElement([0, 1, 2, 3, 4, 5]),
+            'open_answer' => null,
+            'question_id' => null
         ];
     }
 }

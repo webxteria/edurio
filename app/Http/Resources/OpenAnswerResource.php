@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class AnswerResource extends JsonResource
+class OpenAnswerResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -15,10 +15,12 @@ class AnswerResource extends JsonResource
     public function toArray($request)
     {
         return [
-            'id' => $this->id,
-            'count' => $this->count,
-            'average' => $this->average,
-            'options' => json_decode($this->options)
+            'order' => $this['order'],
+            'word_count' => $this->when($this->open_answer, function () {
+                $data = array();
+                $data =  array_merge($data, explode(" ", $this->open_answer));
+                return array_count_values($data);
+            })
         ];
     }
 }

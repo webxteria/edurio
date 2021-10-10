@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('questions', 'App\Http\Controllers\QuestionsController@index');
-Route::get('questions/{id}/answers', 'App\Http\Controllers\AnswersController@show');
+Route::get('questions/open', 'App\Http\Controllers\QuestionsController@open');
+Route::get('questions/scalar', 'App\Http\Controllers\QuestionsController@scalar');
